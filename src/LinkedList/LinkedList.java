@@ -1,10 +1,8 @@
-import java.io.*;
-import java.util.*;
-import java.math.*;
+package LinkedList;
 
-public class Solution {  
+public class LinkedList {
   public static void main(String[] args) { 
-    Solution list = new Solution();
+    LinkedList list = new LinkedList();
     Node head = new Node(5);
     list.add(head, new Node(6));
     list.add(head, new Node(7));
@@ -112,8 +110,4 @@ public class Solution {
     }
         return head;
   }
-  //reverse using recursion
-  //print reverse recursion
-  //gayle problems
-  
 }

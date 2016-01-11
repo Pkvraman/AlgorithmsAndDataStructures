@@ -1,9 +1,8 @@
+package Strings;
 
-package Question8_4;
+import java.util.ArrayList;
 
-import java.util.*;
-
-public class Question {
+public class Permutations {
 
     public static ArrayList<String> getPerms(String s) {
         ArrayList<String> permutations = new ArrayList<String>();
@@ -18,13 +17,13 @@ public class Question {
         char first = s.charAt(0); // get the first character
         String remainder = s.substring(1); // remove the first character
         ArrayList<String> words = getPerms(remainder);
-        System.out.println("the string is "+s+" ,first char is "+first+" and the words are "+words);
+        System.out.println("the string is " + s + " ,first char is " + first + " and the words are " + words);
         for (String word : words) {
             for (int j = 0; j <= word.length(); j++) {
                 permutations.add(insertCharAt(word, first, j));
             }
         }
-        System.out.println("permutations are "+permutations);
+        System.out.println("permutations are " + permutations);
         return permutations;
     }
 
