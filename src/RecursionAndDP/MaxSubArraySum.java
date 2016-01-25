@@ -1,5 +1,8 @@
 package RecursionAndDP;
 
+/**
+ * Multiple ways to do MaxSubArraySum problem: Find subarray/subset which has maximum sum
+ */
 public class MaxSubArraySum {
     public static void main(String[] args) {
         int[] a={-2, -5, 6, -2, -3, 1, 5, -6};
@@ -79,5 +82,19 @@ public class MaxSubArraySum {
             i++;
         }
         return false;
+    }
+
+    public static int maxSubsetsum(int[] a) {
+        int sum=a[0];
+        int max=a[0];
+        for(int i=1;i<a.length;i++) {
+            sum=sum+a[i];
+            if(sum<0) {
+                sum=0;
+            } else if(max<sum){
+                max=sum;
+            }
+        }
+        return max;
     }
 }
